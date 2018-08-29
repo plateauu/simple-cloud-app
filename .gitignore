@@ -1,0 +1,19 @@
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+/out/
+.DS_Store
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+.svn
+log/*.log
+tmp/**
+node_modules/
+.sass-cache
+css/reveal.min.css
+js/reveal.min.js
