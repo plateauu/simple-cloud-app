@@ -10,7 +10,19 @@ after_success:
 - bash <(curl -s https://codecov.io/bash)
 
 deploy:
-  provider: script
+- provider: elasticbeanstalk
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  region: us-east-2
+  app: simple-cloud-app
+  env: SimpleCloudApp-env
+  bucket_name: elasticbeanstalk-us-east-2-446774366126
+  zip_file: './build/libs/simple-cloud-app-0.0.1-SNAPSHOT.jar'
+  skip_cleanup: true
+  on:
+    branch: master
+
+- provider: script
   script: bash docker_push.sh
   skip_cleanup: true
   on:
