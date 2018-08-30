@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/plateauu/simple-cloud-app.svg?branch=master)](https://travis-ci.org/plateauu/simple-cloud-app)
